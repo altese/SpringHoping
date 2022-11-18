@@ -154,7 +154,10 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/java,windows,macos,eclipse,web
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1a11e2b4ee303e8ef51d81a8d504f20d40d8c3e1
 *.policy
 *.properties
 /servers
