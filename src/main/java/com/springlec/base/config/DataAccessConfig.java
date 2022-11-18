@@ -28,13 +28,4 @@ public class DataAccessConfig {
 		return new SqlSessionTemplate(sqlSessionFactory);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 } // ---
