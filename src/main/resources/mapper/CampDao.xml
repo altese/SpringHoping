@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD 3.0//EN"
+						"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.springlec.base.dao.CampDao">
+
+	<select id="listCamp" resultType="com.springlec.base.model.campDto">
+		select distinct * from camping.rch where regSeq = #{regSeq}
+	</select>
+
+	<select id="searchRegCamp" resultType="com.springlec.base.model.campDto">
+		select * from camping.regcamp where ${query} like #{content}
+	</select>
+
+	<select id="dateCheck" resultType="com.springlec.base.model.campDto">
+		select distinct * from camping.rch where regSeq=#{regSeq} and roNum not in ( select distinct roNum from BPRCH where boCheckindate between #{startdate} and #{stopdate})
+	</select>
+
+	<select id="readMaxSeq" resultType="int">
+		select max(boSeq) as result from book 
+	</select>
+	
+	<select id="diffDate" resultType="int">
+		select TimeStampdiff(day,#{startdate},#{stopdate}) as result
+	</select>
+</mapper>

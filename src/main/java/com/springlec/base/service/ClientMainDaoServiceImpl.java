@@ -44,11 +44,11 @@ public class ClientMainDaoServiceImpl implements ClientMainDaoService {
 
 	@Override
 	public regcampDto detailView(HttpServletRequest request) throws Exception {
-		String regSeq = request.getParameter("regSeq");
+		int regSeq = Integer.parseInt(request.getParameter("regSeq"));
 		HttpSession session = request.getSession();
 		session.setAttribute("REGSEQ", regSeq);	
 		
-		return dao.detailView(regSeq);
+		return dao.detailView(Integer.toString(regSeq));
 	}
 
 }
