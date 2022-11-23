@@ -55,6 +55,9 @@ public class RegcampFrontController {
 	//regcamp detail 상세페이지 
 	@RequestMapping("/regcampDetail")
 	public String regcampDetail(HttpServletRequest request, Model model) throws Exception{
+		// 예약을 위해서 캠핑장 RegSeq 값을 세션으로 저장함.
+		HttpSession session = request.getSession();
+		session.setAttribute("REGSEQ", request.getParameter("regSeq"));	
 		
 		
 		//캠핑장 각종 디테일

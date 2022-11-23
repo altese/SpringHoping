@@ -27,7 +27,6 @@ public class RegcampDaoServiceImpl implements RegcampDaoService {
 
 	@Override
 	public regcampDto regcampDetailDao(int regSeq) throws Exception {
-		// TODO Auto-generated method stub
 		return dao.regcampDetailDao(regSeq);
 	}
 

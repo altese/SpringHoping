@@ -147,16 +147,16 @@
 			    </a>
 			       <% } else { %>
 			       
-			       <form action="booking.do" method="post"style="margin: 10px;">
-	  				  <input type="hidden" name="regSeq" value="${DetailView.regSeq}">
+			       <form action="booking" method="post"style="margin: 10px;">
+	  				  <input type="hidden" name="regSeq" value="${DetailView.regSeq}" >
 				      <button type="submit" class="btn btn-primary">예약하러 가기</button>
 		    	</form>
 		    	
 		    	
 		    	<%--문의 --%>
 		    	<form action="askWriteView" method="get" style="margin: 10px;">
-	  				  <input type="hidden" name="regSeq" value="${DetailView.regSeq}">
-	  					<input type="hidden" name="regName" value="${DetailView.regName}" >
+	  				  <input type="hidden" name="regSeq" value="${DetailView.regSeq}" >
+	  				  <input type="hidden" name="regName" value="${DetailView.regName}" >
 				      <button type="submit" class="btn btn-primary" <%-- onclick="<!-- /**/ -->" --%>>문의하러 가기</button>
 		    	</form>
         <% } %>
