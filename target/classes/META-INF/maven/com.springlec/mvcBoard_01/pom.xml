@@ -10,7 +10,7 @@
 	<groupId>com.springlec</groupId>
 	<artifactId>mvcBoard_01</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Hoping</name>
+	<name>SpringHoping</name>
 	<description>Spring Hoping</description>
 	<properties>
 		<java.version>11</java.version>
